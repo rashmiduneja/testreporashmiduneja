@@ -1,0 +1,8 @@
+#this is a test only
+
+steps:
+- uses: actions/greeting@v1
+  with:
+    repo-token: ${{ secrets.GITHUB_TOKEN }}
+    issue-message: 'hello world'
+    pr-message: 'Hello world rashmi'
