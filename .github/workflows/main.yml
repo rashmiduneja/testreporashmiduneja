@@ -1,6 +1,19 @@
-steps:
-- uses: actions/first-interaction@v1
-  with:
-    repo-token: ${{ secrets.GITHUB_TOKEN }}
-    issue-message: 'hello world'
-    pr-message: 'Hi Rashmi'
+name: Rashmi's sample
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Print a HelloRashmi message
+        run: echo "Hello from GitHub Actions!"
+
+      # You can add more steps here based on your requirements.
